@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <title>User</title>
+  </head>
+  <body>
+        <h3>User {{ users.id }}</h3>
+        <p>Full Name: {{ users.first_name }} {{ users.last_name }}</p>
+        <br>
+        <p>Email: {{ users.email }}</p>
+        <br>
+        <p>Created at: {{ users.created_at }}</p>
+        <br>
+        <a href="/users/{{users.id}}/edit" class="first_p">Edit</a>
+        <a href="/users/{{users.id}}destroy">Delete</a>
+    </table>
+  </body>
+</html>

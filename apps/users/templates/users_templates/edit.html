@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <title>Update User</title>
+  </head>
+  <body>
+    <h2>Edit User {{ users.id }}!</h2>
+    <form action="/users/update" method='POST'>
+      {% csrf_token %}
+      <input type="hidden" name="id" value="{{ users.id }}">
+      <label for="first_name">First Name:<br><input type="text" name="first_name" id="first_name" value="{{ users.first_name }}"></label><br>
+      <label for="last_name">Last Name:<br><input type="text" name="last_name" id="last_name" value="{{ users.last_name }}"></label><br>
+      <label for="email">Email:<br><input type="text" name="email" id="email" value="{{ users.email }}"></label><br>
+      <input type="submit" class= "button" value="Update">
+    </form>
+    <a href="/users/{{users.id}}" class="first_a">Show</a>
+    <a href="/users">Go Back</a>
+  </body>
+</html>
